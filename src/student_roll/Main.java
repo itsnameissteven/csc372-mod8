@@ -17,8 +17,26 @@ import javafx.geometry.Pos;
 
 
 public class Main extends Application  { 
+  MenuItem save,
+  MenuButton menuButton;
+  HBox hbox;
+  Pane pane;
+  BorderPane borderPane;
+  Scene scene;
+
   @Override
   public void start(Stage primaryStage) throws Exception {
+    borderPane = new BorderPane();
+
+    // Menu Button
+    save = new MenuItem("Save");
+    menuButton = new MenuButton("Menu", null, save);
+    hbox.setPAdding(new Insets(15, 12, 15, 12));
+    hbox.setSpacing(10);
+    hbox.setStyle("-fx-background-color: #336699;");
+    borderPane.setTop(hbox);
+
+    scene = new Scene(borderPane, 500, 300);
 
     primaryStage.setTitle("User Interface");
     // primaryStage.setScene(scene);
