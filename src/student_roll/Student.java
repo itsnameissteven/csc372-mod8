@@ -36,6 +36,6 @@ public class Student {
 
   @Override
   public String toString() {
-    return "Name: " + this.name + ", " + "address: " + this.address + ", " + this.GPA + ".";
+    return "Name: " + this.name + ", " + "address: " + this.address + ", GPA: " + this.GPA + ".";
   }
 }

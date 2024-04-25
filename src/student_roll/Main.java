@@ -55,7 +55,7 @@ public class Main extends Application  {
     nameText = new TextField("");
     gridPane.add(nameLabel, 0, 0);
     gridPane.add(nameText, 1, 0);
-    addressLabel = new Label("Student address: ");
+    addressLabel = new Label("Student Address: ");
     addressText = new TextField("");
     gridPane.add(addressLabel, 0, 1);
     gridPane.add(addressText, 1, 1);
