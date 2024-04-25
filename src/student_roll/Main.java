@@ -13,7 +13,7 @@ import javafx.geometry.Pos;
 
 
 public class Main extends Application  { 
-  MenuItem save;
+  MenuItem save, exit;
   MenuButton menuButton;
   Button submitButton;
   HBox hbox;
@@ -39,7 +39,8 @@ public class Main extends Application  {
 
     // Menu Button
     save = new MenuItem("Save");
-    menuButton = new MenuButton("Menu", null, save);
+    exit = new MenuItem("Exit");
+    menuButton = new MenuButton("Menu", null, save, exit);
     hbox = new HBox(menuButton);
     hbox.setPadding(new Insets(10, 12, 10, 12));
     hbox.setSpacing(10);
