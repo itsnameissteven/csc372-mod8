@@ -1,5 +1,8 @@
 package student_roll;
 
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -86,6 +89,31 @@ public class Main extends Application  {
           Alert alert = new Alert(AlertType.ERROR, e.getMessage());
           alert.showAndWait();
         }
+      }
+    });
+
+    save.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent event) {
+        try {
+          String fileName = "students.txt";
+          FileOutputStream fileStream = new FileOutputStream(fileName);
+          PrintWriter outFS = new PrintWriter(fileStream);
+          outFS.print(students.toString());
+          outFS.close();
+          Alert alert =  new Alert(AlertType.CONFIRMATION, "File saved");
+          alert.show();
+        } catch (Exception e) {
+          Alert errorAlert = new Alert(AlertType.ERROR, e.getMessage());
+          errorAlert.showAndWait();
+        }
+      }
+    });
+
+    exit.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent event) {
+        primaryStage.close();
       }
     });
     

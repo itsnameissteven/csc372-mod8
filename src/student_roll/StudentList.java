@@ -23,9 +23,12 @@ public class StudentList {
 
   @Override
   public String toString() {
+    MergeSort mergeSort = new MergeSort();
+    mergeSort.sort(students, 0, students.size() - 1);
+
     String studentsString = "";
     for(int i = 0; i < students.size(); i++) {
-      studentsString += students.get(i).toString() + "\n\r";
+      studentsString += students.get(i).toString() + "\n";
     }
     return studentsString;
   }
