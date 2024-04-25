@@ -4,10 +4,14 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.Date;
 import java.util.Random;
+
+import javax.swing.Action;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.input.MouseEvent;
 import javafx.event.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
@@ -67,6 +71,13 @@ public class Main extends Application  {
     submitButton = new Button("Add Student");
     gridPane.add(submitButton, 0, 3, 2, 1);
     GridPane.setHalignment(submitButton, HPos.CENTER);
+
+    submitButton.setOnAction(new EventHandler<ActionEvent>() {
+      @Override
+      public void handle(ActionEvent event) {
+        primaryStage.close();
+      }
+    });
     
     borderPane.setCenter(gridPane);
     scene = new Scene(borderPane, 500, 300);
