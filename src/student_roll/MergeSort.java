@@ -2,6 +2,7 @@ package student_roll;
 import java.util.Comparator;
 import java.util.LinkedList;
 
+// Sort method to organize student data by name
 public class MergeSort  {
   Comparator<Student> comparer = new NameComparator();
   

@@ -76,6 +76,7 @@ public class Main extends Application  {
     studentsList.setEditable(false);
     gridPane.add(studentsList, 0, 5, 2, 1);
 
+    // Adds new student to the student list
     submitButton.setOnAction(new EventHandler<ActionEvent>() {
       @Override
       public void handle(ActionEvent event) {
@@ -92,6 +93,7 @@ public class Main extends Application  {
       }
     });
 
+    // Saves student list to new file
     save.setOnAction(new EventHandler<ActionEvent>() {
       @Override
       public void handle(ActionEvent event) {
@@ -110,6 +112,7 @@ public class Main extends Application  {
       }
     });
 
+    // exits program
     exit.setOnAction(new EventHandler<ActionEvent>() {
       @Override
       public void handle(ActionEvent event) {
@@ -120,7 +123,7 @@ public class Main extends Application  {
     borderPane.setCenter(gridPane);
     scene = new Scene(borderPane, 500, 400);
 
-    primaryStage.setTitle("User Interface");
+    primaryStage.setTitle("Student List");
     primaryStage.setScene(scene);
     primaryStage.show();
   }
