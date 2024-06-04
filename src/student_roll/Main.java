@@ -123,7 +123,7 @@ public class Main extends Application  {
     borderPane.setCenter(gridPane);
     scene = new Scene(borderPane, 500, 400);
 
-    primaryStage.setTitle("User Interface");
+    primaryStage.setTitle("Student List");
     primaryStage.setScene(scene);
     primaryStage.show();
   }
