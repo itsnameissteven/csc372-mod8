@@ -8,19 +8,23 @@ public class StudentList {
     students = new LinkedList<Student>();
   }
 
+  // Getter
   public LinkedList<Student> getStudents() {
     return this.students;
   }
 
+  // Setter
   public void setStudents(LinkedList<Student> students) {
     this.students = students;
   }
 
+  // Add student to list
   public void add(String name, String address, double GPA) throws InvalidGPAException {
     Student student = new Student(name, address, GPA);
     this.students.add(student);
   }
 
+  // Sorts and iterates through student list, adding each student to a list
   @Override
   public String toString() {
     MergeSort mergeSort = new MergeSort();

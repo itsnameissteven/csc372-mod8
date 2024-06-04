@@ -27,6 +27,7 @@ public class Student {
     this.address = address;
   }
 
+  // Throws an error is setting incorrect GPAValue
   public void setGPA(double GPA) throws InvalidGPAException {
     if(GPA > 4.0 || GPA < 0.0) {
       throw new InvalidGPAException("GPA value must be between 0-4");
@@ -34,6 +35,7 @@ public class Student {
     this.GPA = GPA;
   }
 
+  // Prints/formats student information
   @Override
   public String toString() {
     return "Name: " + this.name + ", " + "address: " + this.address + ", GPA: " + this.GPA + ".";
